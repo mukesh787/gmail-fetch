@@ -9,21 +9,21 @@ import json
 import re
 from email import message_from_bytes
 
-# Scopes required to read Gmail messages
+
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 app = FastAPI()
 
-# Authenticate and create Gmail API service
+
 def get_gmail_service():
     creds = None
     token_file = 'token.json'
 
-    # Load existing token
+
     if os.path.exists(token_file):
         creds = Credentials.from_authorized_user_file(token_file, SCOPES)
 
-    # If no valid token, start OAuth flow
+
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -31,7 +31,7 @@ def get_gmail_service():
             flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
 
-        # Save token for future use
+
         with open(token_file, 'w') as token:
             token.write(creds.to_json())
 
