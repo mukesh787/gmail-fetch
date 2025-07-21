@@ -21,7 +21,7 @@ To run this project:
 
    uvicorn main:app --reload
 
-5. open your browser at http://localhost:8000/emails
+5. open your browser at http://localhost:8000/docs     (Swagger)
 
 Important:
 
