@@ -31,6 +31,11 @@ If you want to test this, send me your Gmail address and I will add you as a tes
 
 my email: mukeshadhikary786@gmail.com
 
+
+Note: You will need to create a credentials.json file manually in the project directory. To do this, follow the steps to generate OAuth 2.0 credentials from the Google Developer Console and download the JSON file. If you face any issue or want to skip this step, feel free to contact me at mukeshadhikary786@gmail.com — GitHub restricts uploading such sensitive information.
+
+
+
 After that, when you run the app, a browser window will open to let you login with your Gmail account.
 
 You might see a warning "Google hasn’t verified this app", just click "Advanced" and continue.
